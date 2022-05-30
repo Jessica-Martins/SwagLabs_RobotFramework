@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.4 on darwin)" generated="20220530 05:24:45.607" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.4 on darwin)" generated="20220530 06:47:54.686" rpa="false" schemaversion="3">
 <suite id="s1" name="Saucedemo Testes" source="/Users/jessicamartins/Documents/Projetos/Teste/SwagLabs_RobotFramework/saucedemo_testes.robot">
 <kw name="Abrir o navegador" library="saucedemo_resources" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220530 05:24:45.691" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220530 05:24:45.691" endtime="20220530 05:24:47.034"/>
+<msg timestamp="20220530 06:47:54.766" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220530 06:47:54.766" endtime="20220530 06:47:55.996"/>
 </kw>
-<status status="PASS" starttime="20220530 05:24:45.691" endtime="20220530 05:24:47.035"/>
+<status status="PASS" starttime="20220530 06:47:54.766" endtime="20220530 06:47:55.996"/>
 </kw>
 <test id="s1-t1" name="Caso de teste 01 - Realizar login" line="13">
 <kw name="Acessar a página do site saucedemo.com" library="saucedemo_resources">
 <kw name="Go To" library="SeleniumLibrary">
-<arg>url=https://www.saucedemo.com</arg>
+<arg>url=${LOGIN_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220530 05:24:47.036" level="INFO">Opening url 'https://www.saucedemo.com'</msg>
-<status status="PASS" starttime="20220530 05:24:47.036" endtime="20220530 05:24:47.476"/>
+<msg timestamp="20220530 06:47:55.998" level="INFO">Opening url 'https://www.saucedemo.com'</msg>
+<status status="PASS" starttime="20220530 06:47:55.997" endtime="20220530 06:47:56.500"/>
 </kw>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>locator=${INPUT_LOGIN}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220530 05:24:47.488" level="INFO">Element 'id=user-name' is displayed.</msg>
-<status status="PASS" starttime="20220530 05:24:47.476" endtime="20220530 05:24:47.488"/>
+<msg timestamp="20220530 06:47:56.516" level="INFO">Element 'id=user-name' is displayed.</msg>
+<status status="PASS" starttime="20220530 06:47:56.500" endtime="20220530 06:47:56.516"/>
 </kw>
-<status status="PASS" starttime="20220530 05:24:47.036" endtime="20220530 05:24:47.488"/>
+<status status="PASS" starttime="20220530 06:47:55.997" endtime="20220530 06:47:56.516"/>
 </kw>
 <kw name="Informar o usuário" library="saucedemo_resources">
 <arg>standard_user</arg>
@@ -32,10 +32,10 @@
 <arg>${INPUT_LOGIN}</arg>
 <arg>${user-name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220530 05:24:47.489" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
-<status status="PASS" starttime="20220530 05:24:47.489" endtime="20220530 05:24:47.558"/>
+<msg timestamp="20220530 06:47:56.517" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20220530 06:47:56.516" endtime="20220530 06:47:56.582"/>
 </kw>
-<status status="PASS" starttime="20220530 05:24:47.489" endtime="20220530 05:24:47.558"/>
+<status status="PASS" starttime="20220530 06:47:56.516" endtime="20220530 06:47:56.582"/>
 </kw>
 <kw name="informar a senha" library="saucedemo_resources">
 <arg>secret_sauce</arg>
@@ -43,42 +43,42 @@
 <arg>${INPUT_PASSWORD}</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220530 05:24:47.559" level="INFO">Typing password into text field 'id=password'.</msg>
-<msg timestamp="20220530 05:24:47.575" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220530 05:24:47.594" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220530 05:24:47.559" endtime="20220530 05:24:47.594"/>
+<msg timestamp="20220530 06:47:56.583" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg timestamp="20220530 06:47:56.599" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220530 06:47:56.618" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220530 06:47:56.583" endtime="20220530 06:47:56.618"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220530 05:24:49.595" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220530 05:24:47.594" endtime="20220530 05:24:49.595"/>
+<msg timestamp="20220530 06:47:58.620" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220530 06:47:56.618" endtime="20220530 06:47:58.620"/>
 </kw>
-<status status="PASS" starttime="20220530 05:24:47.558" endtime="20220530 05:24:49.595"/>
+<status status="PASS" starttime="20220530 06:47:56.582" endtime="20220530 06:47:58.620"/>
 </kw>
 <kw name="Submeter as credenciais" library="saucedemo_resources">
 <kw name="Click Button" library="SeleniumLibrary">
-<arg>login-button</arg>
+<arg>${BUTTON_LOGIN}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220530 05:24:49.596" level="INFO">Clicking button 'login-button'.</msg>
-<status status="PASS" starttime="20220530 05:24:49.596" endtime="20220530 05:24:49.671"/>
+<msg timestamp="20220530 06:47:58.622" level="INFO">Clicking button 'id=login-button'.</msg>
+<status status="PASS" starttime="20220530 06:47:58.621" endtime="20220530 06:47:58.696"/>
 </kw>
-<status status="PASS" starttime="20220530 05:24:49.595" endtime="20220530 05:24:49.672"/>
+<status status="PASS" starttime="20220530 06:47:58.621" endtime="20220530 06:47:58.696"/>
 </kw>
 <kw name="Página inicial deve estar aberta possui produtos" library="saucedemo_resources">
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>//span[@class="title"]</arg>
+<arg>${TITLE_PRODUCT_PAGE}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220530 05:24:49.686" level="INFO">Element '//span[@class="title"]' is displayed.</msg>
-<status status="PASS" starttime="20220530 05:24:49.672" endtime="20220530 05:24:49.686"/>
+<msg timestamp="20220530 06:47:58.717" level="INFO">Element '//span[@class="title"]' is displayed.</msg>
+<status status="PASS" starttime="20220530 06:47:58.696" endtime="20220530 06:47:58.717"/>
 </kw>
-<status status="PASS" starttime="20220530 05:24:49.672" endtime="20220530 05:24:49.686"/>
+<status status="PASS" starttime="20220530 06:47:58.696" endtime="20220530 06:47:58.717"/>
 </kw>
 <doc>Esse teste verifica o login no site da saucedemo.com</doc>
 <tag>login</tag>
 <tag>password</tag>
 <tag>user_name</tag>
-<status status="PASS" starttime="20220530 05:24:47.035" endtime="20220530 05:24:49.686"/>
+<status status="PASS" starttime="20220530 06:47:55.996" endtime="20220530 06:47:58.717"/>
 </test>
 <test id="s1-t2" name="Caso de teste 02 - Ordenar os produtos pelo valor (low to high)" line="22">
 <kw name="Verificar se a página possui filtro de produtos" library="saucedemo_resources">
@@ -86,145 +86,145 @@
 <arg>locator=${FILTER_PRODUCT}</arg>
 <arg>expected=Name (A to Z)</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20220530 05:24:49.698" level="INFO">Element '//select[contains(@class,'container')]' contains text 'Name (A to Z)'.</msg>
-<status status="PASS" starttime="20220530 05:24:49.687" endtime="20220530 05:24:49.698"/>
+<msg timestamp="20220530 06:47:58.729" level="INFO">Element '//select[contains(@class,'container')]' contains text 'Name (A to Z)'.</msg>
+<status status="PASS" starttime="20220530 06:47:58.718" endtime="20220530 06:47:58.729"/>
 </kw>
-<status status="PASS" starttime="20220530 05:24:49.687" endtime="20220530 05:24:49.699"/>
+<status status="PASS" starttime="20220530 06:47:58.718" endtime="20220530 06:47:58.729"/>
 </kw>
 <kw name="Clicar no filtro de produtos" library="saucedemo_resources">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>locator=${FILTER_PRODUCT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220530 05:24:49.699" level="INFO">Clicking element '//select[contains(@class,'container')]'.</msg>
-<status status="PASS" starttime="20220530 05:24:49.699" endtime="20220530 05:24:49.732"/>
+<msg timestamp="20220530 06:47:58.730" level="INFO">Clicking element '//select[contains(@class,'container')]'.</msg>
+<status status="PASS" starttime="20220530 06:47:58.730" endtime="20220530 06:47:58.769"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220530 05:24:51.735" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220530 05:24:49.733" endtime="20220530 05:24:51.735"/>
+<msg timestamp="20220530 06:48:00.771" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220530 06:47:58.769" endtime="20220530 06:48:00.771"/>
 </kw>
-<status status="PASS" starttime="20220530 05:24:49.699" endtime="20220530 05:24:51.736"/>
+<status status="PASS" starttime="20220530 06:47:58.729" endtime="20220530 06:48:00.771"/>
 </kw>
 <kw name="Selecionar a opção &quot;Price (low to high)&quot;" library="saucedemo_resources" sourcename="Selecionar a opção ${ORDER_PRODUCT}">
 <kw name="Select From List By Index" library="SeleniumLibrary">
 <arg>${FILTER_PRODUCT}</arg>
 <arg>2</arg>
 <doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
-<msg timestamp="20220530 05:24:51.737" level="INFO">Selecting options from selection list '//select[contains(@class,'container')]' by index 2.</msg>
-<status status="PASS" starttime="20220530 05:24:51.736" endtime="20220530 05:24:52.041"/>
+<msg timestamp="20220530 06:48:00.772" level="INFO">Selecting options from selection list '//select[contains(@class,'container')]' by index 2.</msg>
+<status status="PASS" starttime="20220530 06:48:00.772" endtime="20220530 06:48:01.075"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220530 05:24:54.043" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220530 05:24:52.042" endtime="20220530 05:24:54.043"/>
+<msg timestamp="20220530 06:48:03.076" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220530 06:48:01.075" endtime="20220530 06:48:03.077"/>
 </kw>
-<status status="PASS" starttime="20220530 05:24:51.736" endtime="20220530 05:24:54.044"/>
+<status status="PASS" starttime="20220530 06:48:00.772" endtime="20220530 06:48:03.078"/>
 </kw>
 <doc>Esse teste verifica a ordenação dos produtos pelo valor (low to high)</doc>
 <tag>filto_ordenar</tag>
 <tag>filtrar</tag>
 <tag>ordenar</tag>
 <tag>ordenar_produto</tag>
-<status status="PASS" starttime="20220530 05:24:49.686" endtime="20220530 05:24:54.045"/>
+<status status="PASS" starttime="20220530 06:47:58.717" endtime="20220530 06:48:03.078"/>
 </test>
 <test id="s1-t3" name="Caso de teste 03 - Adicionar produtos ao carrinho" line="29">
 <kw name=" Adicionar o produto &quot;Sauce Labs Onesie&quot; ao carrinho de compras" library="saucedemo_resources">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id=add-to-cart-sauce-labs-onesie</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220530 05:24:54.049" level="INFO">Clicking button 'id=add-to-cart-sauce-labs-onesie'.</msg>
-<status status="PASS" starttime="20220530 05:24:54.048" endtime="20220530 05:24:54.097"/>
+<msg timestamp="20220530 06:48:03.083" level="INFO">Clicking button 'id=add-to-cart-sauce-labs-onesie'.</msg>
+<status status="PASS" starttime="20220530 06:48:03.082" endtime="20220530 06:48:03.132"/>
 </kw>
-<status status="PASS" starttime="20220530 05:24:54.048" endtime="20220530 05:24:54.097"/>
+<status status="PASS" starttime="20220530 06:48:03.081" endtime="20220530 06:48:03.132"/>
 </kw>
 <kw name="Adicionar o produto &quot;Test.allTheThings() T-Shirt(Red)&quot;" library="saucedemo_resources">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id=add-to-cart-test.allthethings()-t-shirt-(red)</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220530 05:24:54.097" level="INFO">Clicking button 'id=add-to-cart-test.allthethings()-t-shirt-(red)'.</msg>
-<status status="PASS" starttime="20220530 05:24:54.097" endtime="20220530 05:24:54.126"/>
+<msg timestamp="20220530 06:48:03.132" level="INFO">Clicking button 'id=add-to-cart-test.allthethings()-t-shirt-(red)'.</msg>
+<status status="PASS" starttime="20220530 06:48:03.132" endtime="20220530 06:48:03.162"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220530 05:24:56.128" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220530 05:24:54.126" endtime="20220530 05:24:56.129"/>
+<msg timestamp="20220530 06:48:05.163" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220530 06:48:03.162" endtime="20220530 06:48:05.164"/>
 </kw>
-<status status="PASS" starttime="20220530 05:24:54.097" endtime="20220530 05:24:56.130"/>
+<status status="PASS" starttime="20220530 06:48:03.132" endtime="20220530 06:48:05.164"/>
 </kw>
 <doc>Esse teste verifica a adição dos produtos selecionados no carrinho de compra</doc>
-<status status="PASS" starttime="20220530 05:24:54.046" endtime="20220530 05:24:56.130"/>
+<status status="PASS" starttime="20220530 06:48:03.080" endtime="20220530 06:48:05.165"/>
 </test>
 <test id="s1-t4" name="Caso de teste 04 - Acessar o carrinho" line="34">
 <kw name="clicar no carrinho de compras" library="saucedemo_resources">
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>locator=//*[@id="shopping_cart_container"]/a</arg>
+<arg>${SHOPPING_CART}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220530 05:24:56.134" level="INFO">Clicking element '//*[@id="shopping_cart_container"]/a'.</msg>
-<status status="PASS" starttime="20220530 05:24:56.133" endtime="20220530 05:24:56.178"/>
+<msg timestamp="20220530 06:48:05.169" level="INFO">Clicking element '//*[@id="shopping_cart_container"]/a'.</msg>
+<status status="PASS" starttime="20220530 06:48:05.168" endtime="20220530 06:48:05.214"/>
 </kw>
-<status status="PASS" starttime="20220530 05:24:56.133" endtime="20220530 05:24:56.178"/>
+<status status="PASS" starttime="20220530 06:48:05.168" endtime="20220530 06:48:05.214"/>
 </kw>
 <kw name="Verificar se a página possui &quot;Your Cart&quot;" library="saucedemo_resources">
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>//span[@class='title'][contains(.,'Your Cart')]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220530 05:24:56.193" level="INFO">Element '//span[@class='title'][contains(.,'Your Cart')]' is displayed.</msg>
-<status status="PASS" starttime="20220530 05:24:56.179" endtime="20220530 05:24:56.193"/>
+<msg timestamp="20220530 06:48:05.228" level="INFO">Element '//span[@class='title'][contains(.,'Your Cart')]' is displayed.</msg>
+<status status="PASS" starttime="20220530 06:48:05.215" endtime="20220530 06:48:05.228"/>
 </kw>
-<status status="PASS" starttime="20220530 05:24:56.178" endtime="20220530 05:24:56.193"/>
+<status status="PASS" starttime="20220530 06:48:05.214" endtime="20220530 06:48:05.229"/>
 </kw>
 <kw name="Verificar se o produto &quot;Sauce Labs Onesie&quot; está no carrinho de compras" library="saucedemo_resources">
 <kw name="Element Should Contain" library="SeleniumLibrary">
 <arg>locator=//a[contains(.,'Sauce Labs Onesie')]</arg>
 <arg>expected=Sauce Labs Onesie</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20220530 05:24:56.206" level="INFO">Element '//a[contains(.,'Sauce Labs Onesie')]' contains text 'Sauce Labs Onesie'.</msg>
-<status status="PASS" starttime="20220530 05:24:56.193" endtime="20220530 05:24:56.206"/>
+<msg timestamp="20220530 06:48:05.241" level="INFO">Element '//a[contains(.,'Sauce Labs Onesie')]' contains text 'Sauce Labs Onesie'.</msg>
+<status status="PASS" starttime="20220530 06:48:05.229" endtime="20220530 06:48:05.241"/>
 </kw>
-<status status="PASS" starttime="20220530 05:24:56.193" endtime="20220530 05:24:56.206"/>
+<status status="PASS" starttime="20220530 06:48:05.229" endtime="20220530 06:48:05.242"/>
 </kw>
 <kw name="Verificar se o produto &quot;Test.allTheThings() T-Shirt(Red)&quot; está no carrinho de compras" library="saucedemo_resources">
 <kw name="Element Should Contain" library="SeleniumLibrary">
 <arg>locator=//a[contains(.,'Test.allTheThings() T-Shirt (Red)')]</arg>
 <arg>expected=Test.allTheThings() T-Shirt (Red)</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20220530 05:24:56.218" level="INFO">Element '//a[contains(.,'Test.allTheThings() T-Shirt (Red)')]' contains text 'Test.allTheThings() T-Shirt (Red)'.</msg>
-<status status="PASS" starttime="20220530 05:24:56.206" endtime="20220530 05:24:56.218"/>
+<msg timestamp="20220530 06:48:05.253" level="INFO">Element '//a[contains(.,'Test.allTheThings() T-Shirt (Red)')]' contains text 'Test.allTheThings() T-Shirt (Red)'.</msg>
+<status status="PASS" starttime="20220530 06:48:05.242" endtime="20220530 06:48:05.253"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220530 05:24:58.220" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220530 05:24:56.218" endtime="20220530 05:24:58.221"/>
+<msg timestamp="20220530 06:48:07.254" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220530 06:48:05.253" endtime="20220530 06:48:07.255"/>
 </kw>
-<status status="PASS" starttime="20220530 05:24:56.206" endtime="20220530 05:24:58.221"/>
+<status status="PASS" starttime="20220530 06:48:05.242" endtime="20220530 06:48:07.256"/>
 </kw>
 <doc>Esse teste verifica o acesso ao carrinho de compras</doc>
 <tag>adicionar_carrinho</tag>
 <tag>carrinho de compras</tag>
-<status status="PASS" starttime="20220530 05:24:56.131" endtime="20220530 05:24:58.222"/>
+<status status="PASS" starttime="20220530 06:48:05.166" endtime="20220530 06:48:07.256"/>
 </test>
 <test id="s1-t5" name="Caso de teste 05 - Concluir a compra" line="42">
 <kw name="Clicar no botão CHECKOUT" library="saucedemo_resources">
 <kw name="Click Button" library="SeleniumLibrary">
-<arg>id=checkout</arg>
+<arg>${BUTTON_CHECKOUT}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220530 05:24:58.225" level="INFO">Clicking button 'id=checkout'.</msg>
-<status status="PASS" starttime="20220530 05:24:58.225" endtime="20220530 05:24:58.276"/>
+<msg timestamp="20220530 06:48:07.260" level="INFO">Clicking button 'id=checkout'.</msg>
+<status status="PASS" starttime="20220530 06:48:07.259" endtime="20220530 06:48:07.312"/>
 </kw>
-<status status="PASS" starttime="20220530 05:24:58.224" endtime="20220530 05:24:58.276"/>
+<status status="PASS" starttime="20220530 06:48:07.259" endtime="20220530 06:48:07.312"/>
 </kw>
 <kw name="Verificar se a página possui &quot;CHECKOUT: YOUR INFORMATION&quot;" library="saucedemo_resources">
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>//span[@class='title'][contains(.,'Checkout: Your Information')]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220530 05:24:58.290" level="INFO">Element '//span[@class='title'][contains(.,'Checkout: Your Information')]' is displayed.</msg>
-<status status="PASS" starttime="20220530 05:24:58.276" endtime="20220530 05:24:58.290"/>
+<msg timestamp="20220530 06:48:07.325" level="INFO">Element '//span[@class='title'][contains(.,'Checkout: Your Information')]' is displayed.</msg>
+<status status="PASS" starttime="20220530 06:48:07.312" endtime="20220530 06:48:07.325"/>
 </kw>
-<status status="PASS" starttime="20220530 05:24:58.276" endtime="20220530 05:24:58.290"/>
+<status status="PASS" starttime="20220530 06:48:07.312" endtime="20220530 06:48:07.325"/>
 </kw>
 <kw name="Informar o &quot;First Name&quot;" library="saucedemo_resources">
 <arg>Hyarion</arg>
@@ -232,10 +232,10 @@
 <arg>${INPUT_FIRST_NAME}</arg>
 <arg>${first-name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220530 05:24:58.290" level="INFO">Typing text 'Hyarion' into text field 'id=first-name'.</msg>
-<status status="PASS" starttime="20220530 05:24:58.290" endtime="20220530 05:24:58.330"/>
+<msg timestamp="20220530 06:48:07.325" level="INFO">Typing text 'Hyarion' into text field 'id=first-name'.</msg>
+<status status="PASS" starttime="20220530 06:48:07.325" endtime="20220530 06:48:07.365"/>
 </kw>
-<status status="PASS" starttime="20220530 05:24:58.290" endtime="20220530 05:24:58.330"/>
+<status status="PASS" starttime="20220530 06:48:07.325" endtime="20220530 06:48:07.365"/>
 </kw>
 <kw name="Informar o &quot;Last Name&quot;" library="saucedemo_resources">
 <arg>Tordek</arg>
@@ -243,10 +243,10 @@
 <arg>${INPUT_LAST_NAME}</arg>
 <arg>${last-name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220530 05:24:58.330" level="INFO">Typing text 'Tordek' into text field 'id=last-name'.</msg>
-<status status="PASS" starttime="20220530 05:24:58.330" endtime="20220530 05:24:58.364"/>
+<msg timestamp="20220530 06:48:07.366" level="INFO">Typing text 'Tordek' into text field 'id=last-name'.</msg>
+<status status="PASS" starttime="20220530 06:48:07.366" endtime="20220530 06:48:07.400"/>
 </kw>
-<status status="PASS" starttime="20220530 05:24:58.330" endtime="20220530 05:24:58.365"/>
+<status status="PASS" starttime="20220530 06:48:07.366" endtime="20220530 06:48:07.400"/>
 </kw>
 <kw name="Informar o &quot;ZIP/Postal Code&quot;" library="saucedemo_resources">
 <arg>69918-578</arg>
@@ -254,77 +254,77 @@
 <arg>${INPUT_POSTAL_CODE}</arg>
 <arg>${postal-code}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220530 05:24:58.365" level="INFO">Typing text '69918-578' into text field 'id=postal-code'.</msg>
-<status status="PASS" starttime="20220530 05:24:58.365" endtime="20220530 05:24:58.401"/>
+<msg timestamp="20220530 06:48:07.401" level="INFO">Typing text '69918-578' into text field 'id=postal-code'.</msg>
+<status status="PASS" starttime="20220530 06:48:07.401" endtime="20220530 06:48:07.437"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220530 05:25:00.402" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220530 05:24:58.401" endtime="20220530 05:25:00.403"/>
+<msg timestamp="20220530 06:48:09.440" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220530 06:48:07.437" endtime="20220530 06:48:09.440"/>
 </kw>
-<status status="PASS" starttime="20220530 05:24:58.365" endtime="20220530 05:25:00.403"/>
+<status status="PASS" starttime="20220530 06:48:07.401" endtime="20220530 06:48:09.441"/>
 </kw>
 <kw name="Clicar no botão &quot;CONTINUE&quot;" library="saucedemo_resources">
 <kw name="Click Button" library="SeleniumLibrary">
-<arg>id=continue</arg>
+<arg>${BUTTON_CONTINUE}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220530 05:25:00.405" level="INFO">Clicking button 'id=continue'.</msg>
-<status status="PASS" starttime="20220530 05:25:00.405" endtime="20220530 05:25:00.455"/>
+<msg timestamp="20220530 06:48:09.443" level="INFO">Clicking button 'id=continue'.</msg>
+<status status="PASS" starttime="20220530 06:48:09.442" endtime="20220530 06:48:09.494"/>
 </kw>
-<status status="PASS" starttime="20220530 05:25:00.404" endtime="20220530 05:25:00.455"/>
+<status status="PASS" starttime="20220530 06:48:09.441" endtime="20220530 06:48:09.494"/>
 </kw>
 <kw name="Verificar se a página possui &quot;CHECKOUT: OVERVIEW&quot;" library="saucedemo_resources">
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>//span[@class='title']</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220530 05:25:00.468" level="INFO">Element '//span[@class='title']' is displayed.</msg>
-<status status="PASS" starttime="20220530 05:25:00.455" endtime="20220530 05:25:00.468"/>
+<msg timestamp="20220530 06:48:09.507" level="INFO">Element '//span[@class='title']' is displayed.</msg>
+<status status="PASS" starttime="20220530 06:48:09.495" endtime="20220530 06:48:09.507"/>
 </kw>
-<status status="PASS" starttime="20220530 05:25:00.455" endtime="20220530 05:25:00.468"/>
+<status status="PASS" starttime="20220530 06:48:09.494" endtime="20220530 06:48:09.507"/>
 </kw>
 <kw name="Clicar no botão &quot;FINISH&quot;" library="saucedemo_resources">
 <kw name="Click Button" library="SeleniumLibrary">
-<arg>id=finish</arg>
+<arg>${BUTTON_FINISH}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220530 05:25:00.469" level="INFO">Clicking button 'id=finish'.</msg>
-<status status="PASS" starttime="20220530 05:25:00.469" endtime="20220530 05:25:00.496"/>
+<msg timestamp="20220530 06:48:09.508" level="INFO">Clicking button 'id=finish'.</msg>
+<status status="PASS" starttime="20220530 06:48:09.508" endtime="20220530 06:48:09.536"/>
 </kw>
-<status status="PASS" starttime="20220530 05:25:00.469" endtime="20220530 05:25:00.497"/>
+<status status="PASS" starttime="20220530 06:48:09.507" endtime="20220530 06:48:09.536"/>
 </kw>
 <kw name="Verificar se a página possui &quot;THANK YOU FOR YOUR ORDER&quot;" library="saucedemo_resources">
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>//h2[@class='complete-header'][contains(.,'THANK YOU FOR YOUR ORDER')]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220530 05:25:00.507" level="INFO">Element '//h2[@class='complete-header'][contains(.,'THANK YOU FOR YOUR ORDER')]' is displayed.</msg>
-<status status="PASS" starttime="20220530 05:25:00.497" endtime="20220530 05:25:00.507"/>
+<msg timestamp="20220530 06:48:09.547" level="INFO">Element '//h2[@class='complete-header'][contains(.,'THANK YOU FOR YOUR ORDER')]' is displayed.</msg>
+<status status="PASS" starttime="20220530 06:48:09.536" endtime="20220530 06:48:09.547"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220530 05:25:02.510" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220530 05:25:00.507" endtime="20220530 05:25:02.511"/>
+<msg timestamp="20220530 06:48:11.548" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220530 06:48:09.547" endtime="20220530 06:48:11.549"/>
 </kw>
-<status status="PASS" starttime="20220530 05:25:00.497" endtime="20220530 05:25:02.511"/>
+<status status="PASS" starttime="20220530 06:48:09.536" endtime="20220530 06:48:11.549"/>
 </kw>
 <doc>Esse teste verifica se a compra foi concluida com sucesso</doc>
 <tag>concluir_compra</tag>
-<status status="PASS" starttime="20220530 05:24:58.223" endtime="20220530 05:25:02.512"/>
+<status status="PASS" starttime="20220530 06:48:07.257" endtime="20220530 06:48:11.550"/>
 </test>
 <kw name="Fechar o navegador" library="saucedemo_resources" type="TEARDOWN">
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220530 05:25:02.690" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-49.png"&gt;&lt;img src="selenium-screenshot-49.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220530 05:25:02.514" endtime="20220530 05:25:02.690"/>
+<msg timestamp="20220530 06:48:11.731" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-54.png"&gt;&lt;img src="selenium-screenshot-54.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220530 06:48:11.553" endtime="20220530 06:48:11.731"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220530 05:25:02.690" endtime="20220530 05:25:02.755"/>
+<status status="PASS" starttime="20220530 06:48:11.731" endtime="20220530 06:48:11.798"/>
 </kw>
-<status status="PASS" starttime="20220530 05:25:02.514" endtime="20220530 05:25:02.755"/>
+<status status="PASS" starttime="20220530 06:48:11.552" endtime="20220530 06:48:11.798"/>
 </kw>
 <doc>Essa suite testa o site da saucedemo.com</doc>
-<status status="PASS" starttime="20220530 05:24:45.608" endtime="20220530 05:25:02.755"/>
+<status status="PASS" starttime="20220530 06:47:54.687" endtime="20220530 06:48:11.798"/>
 </suite>
 <statistics>
 <total>

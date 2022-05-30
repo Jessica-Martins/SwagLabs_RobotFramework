@@ -3,11 +3,17 @@ Library     SeleniumLibrary
 
 
 *** Variables ***
-${LOGIN URL}            https://www.saucedemo.com
+${LOGIN_URL}            https://www.saucedemo.com
 ${INPUT_LOGIN}          id=user-name
 ${INPUT_PASSWORD}       id=password
+${BUTTON_LOGIN}         id=login-button
+${TITLE_PRODUCT_PAGE}   //span[@class="title"]
 ${FILTER_PRODUCT}       //select[contains(@class,'container')]
 ${SELECT_FILTER}        //option[@value='lohi']
+${SHOPPING_CART}        //*[@id="shopping_cart_container"]/a
+${BUTTON_CHECKOUT}      id=checkout
+${BUTTON_CONTINUE}      id=continue
+${BUTTON_FINISH}        id=finish
 ${INPUT_FIRST_NAME}     id=first-name
 ${INPUT_LAST_NAME}      id=last-name
 ${INPUT_POSTAL_CODE}    id=postal-code
@@ -22,7 +28,7 @@ Fechar o navegador
     Close Browser
 
 Acessar a página do site saucedemo.com
-    Go To    url=https://www.saucedemo.com
+    Go To    url=${LOGIN_URL}
     Element Should Be Visible    locator=${INPUT_LOGIN}
 
 Informar o usuário
@@ -35,15 +41,15 @@ informar a senha
     Sleep    2s
 
 Submeter as credenciais
-    Click Button    login-button
+    Click Button    ${BUTTON_LOGIN}
 
 Página inicial deve estar aberta possui produtos
-    Element Should Be Visible    //span[@class="title"]
+    Element Should Be Visible    ${TITLE_PRODUCT_PAGE}
 
 Verificar se a página possui filtro de produtos
-    Element Should Contain    locator=${FILTER_PRODUCT}    expected=Name (A to Z)
+    Element Should Contain    ${FILTER_PRODUCT}    expected=Name (A to Z)
 Clicar no filtro de produtos
-    Click Element    locator=${FILTER_PRODUCT}
+    Click Element    ${FILTER_PRODUCT}
     Sleep    2s
     
 Selecionar a opção ${ORDER_PRODUCT}
@@ -58,7 +64,7 @@ Adicionar o produto "Test.allTheThings() T-Shirt(Red)"
      Sleep    2s
 
 clicar no carrinho de compras
-    Click Element    locator=//*[@id="shopping_cart_container"]/a
+    Click Element    ${SHOPPING_CART}
 
 Verificar se a página possui "Your Cart"
     Element Should Be Visible    //span[@class='title'][contains(.,'Your Cart')]
@@ -71,7 +77,7 @@ Verificar se o produto "Test.allTheThings() T-Shirt(Red)" está no carrinho de c
     Sleep    2s
 
 Clicar no botão CHECKOUT
-    Click Button    id=checkout    
+    Click Button    ${BUTTON_CHECKOUT}    
 
 Verificar se a página possui "CHECKOUT: YOUR INFORMATION"
     Element Should Be Visible    //span[@class='title'][contains(.,'Checkout: Your Information')]
@@ -91,13 +97,13 @@ Informar o "ZIP/Postal Code"
     Sleep   2s
 
 Clicar no botão "CONTINUE"
-    Click Button    id=continue
+    Click Button    ${BUTTON_CONTINUE}
 
 Verificar se a página possui "CHECKOUT: OVERVIEW"
     Element Should Be Visible    //span[@class='title']
     
 Clicar no botão "FINISH"
-    Click Button    id=finish
+    Click Button    ${BUTTON_FINISH}
 
 Verificar se a página possui "THANK YOU FOR YOUR ORDER"
     Element Should Be Visible    //h2[@class='complete-header'][contains(.,'THANK YOU FOR YOUR ORDER')]
