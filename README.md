@@ -45,8 +45,6 @@ Robot Framework
 SeleniumLibrary
 Visual Studio
 
-### 📌 Versão
-1.3
 
 ### ✒️ Autora
 Jessica-Martins
