@@ -1,7 +1,12 @@
 *** Settings ***
 Documentation       Essa suite testa o site da saucedemo.com
 
-Resource            saucedemo_resources.robot
+Resource            ../resources/ResourcesCommon.robot
+Resource            ../resources/PO/Login.robot
+Resource            ../resources/PO/ProductsPage.robot
+Resource            ../resources/PO/ShoppingCart.robot
+Resource            ../resources/PO/CheckInformation.robot
+Resource            ../resources/PO/CheckOverview.robot
 
 Suite Setup         Abrir o navegador
 Suite Teardown      Fechar o navegador
@@ -49,5 +54,6 @@ Caso de teste 05 - Concluir a compra
     Informar o "ZIP/Postal Code"    69918-578
     Clicar no botão "CONTINUE"
     Verificar se a página possui "CHECKOUT: OVERVIEW"
+    Verificar se o valor total da compra é "$25.90"
     Clicar no botão "FINISH"
     Verificar se a página possui "THANK YOU FOR YOUR ORDER"

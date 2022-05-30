@@ -37,7 +37,7 @@ Essas instruções permitirão que você obtenha uma cópia do projeto em opera�
 
 ### ⚙️ Executando os testes
 No terminal execute o comando
-`robot -d resultados saucedemo_testes.robot`
+`robot -d resultados tests/SaucedemoTestes.robot `
 
 
 ### 🛠️ Construído com:
