@@ -32,6 +32,7 @@ Informar o usuário
 informar a senha
     [Arguments]    ${password}
     Input Password    ${INPUT_PASSWORD}    ${password}
+    Sleep    2s
 
 Submeter as credenciais
     Click Button    login-button
@@ -46,13 +47,15 @@ Clicar no filtro de produtos
     Sleep    2s
     
 Selecionar a opção ${ORDER_PRODUCT}
-     Select From List By Index    ${FILTER_PRODUCT}    3
+     Select From List By Index    ${FILTER_PRODUCT}    2
+     Sleep    2s
      
  Adicionar o produto "Sauce Labs Onesie" ao carrinho de compras
      Click Button    id=add-to-cart-sauce-labs-onesie
 
 Adicionar o produto "Test.allTheThings() T-Shirt(Red)"
      Click Button    id=add-to-cart-test.allthethings()-t-shirt-(red)
+     Sleep    2s
 
 clicar no carrinho de compras
     Click Element    locator=//*[@id="shopping_cart_container"]/a
@@ -65,6 +68,7 @@ Verificar se o produto "Sauce Labs Onesie" está no carrinho de compras
 
 Verificar se o produto "Test.allTheThings() T-Shirt(Red)" está no carrinho de compras
     Element Should Contain    locator=//a[contains(.,'Test.allTheThings() T-Shirt (Red)')]    expected=Test.allTheThings() T-Shirt (Red)
+    Sleep    2s
 
 Clicar no botão CHECKOUT
     Click Button    id=checkout    
@@ -84,6 +88,7 @@ Informar o "Last Name"
 Informar o "ZIP/Postal Code"
     [Arguments]    ${postal-code}
     Input Text    ${INPUT_POSTAL_CODE}    ${postal-code}
+    Sleep   2s
 
 Clicar no botão "CONTINUE"
     Click Button    id=continue
@@ -96,6 +101,7 @@ Clicar no botão "FINISH"
 
 Verificar se a página possui "THANK YOU FOR YOUR ORDER"
     Element Should Be Visible    //h2[@class='complete-header'][contains(.,'THANK YOU FOR YOUR ORDER')]
+    Sleep    2s
         
 
 

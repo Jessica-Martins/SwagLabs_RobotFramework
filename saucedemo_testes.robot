@@ -26,12 +26,12 @@ Caso de teste 02 - Ordenar os produtos pelo valor (low to high)
     Clicar no filtro de produtos
     Selecionar a opção "Price (low to high)"
 
- Caso de teste 03 - Adicionar produtos ao carrinho
+Caso de teste 03 - Adicionar produtos ao carrinho
     [Documentation]    Esse teste verifica a adição dos produtos selecionados no carrinho de compra
     Adicionar o produto "Sauce Labs Onesie" ao carrinho de compras
     Adicionar o produto "Test.allTheThings() T-Shirt(Red)"
 
- Caso de teste 04 - Acessar o carrinho
+Caso de teste 04 - Acessar o carrinho
     [Documentation]    Esse teste verifica o acesso ao carrinho de compras
     [Tags]    adicionar_carrinho    carrinho de compras
     Clicar no carrinho de compras
@@ -39,7 +39,7 @@ Caso de teste 02 - Ordenar os produtos pelo valor (low to high)
     Verificar se o produto "Sauce Labs Onesie" está no carrinho de compras
     Verificar se o produto "Test.allTheThings() T-Shirt(Red)" está no carrinho de compras
 
- Caso de teste 05 - Concluir a compra
+Caso de teste 05 - Concluir a compra
     [Documentation]    Esse teste verifica se a compra foi concluida com sucesso
     [Tags]    concluir_compra
     Clicar no botão CHECKOUT
